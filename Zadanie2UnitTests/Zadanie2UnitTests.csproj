@@ -17,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ClassLibrary\ClassLibrary.csproj" />
+    <ProjectReference Include="..\Zadanie2\Zadanie2.csproj" />
   </ItemGroup>
 
   <ItemGroup>

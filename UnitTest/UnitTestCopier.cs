@@ -1,9 +1,9 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.IO;
-using ver1;
+using Zadanie1;
 
-namespace ver1
+namespace Zadanie1
 {
 
     public class ConsoleRedirectionToStringWriter : IDisposable

@@ -1,6 +1,4 @@
-﻿using ver1;
-
-namespace Zadanie1
+﻿namespace Zadanie1
 {
     public class Program
     {

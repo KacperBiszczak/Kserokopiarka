@@ -1,8 +1,6 @@
-﻿using ClassLibrary;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using ver1;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Zadanie2UnitTests
+namespace Zadanie2
 {
     [TestClass]
     public class UnitTestMultiFunctionalDevice
