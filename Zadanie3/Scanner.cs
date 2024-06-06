@@ -4,20 +4,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Zadanie2
+namespace Zadanie3
 {
-    public class Copier: BaseDevice, IPrinter, IScanner
+    public class Scanner: BaseDevice, IScanner
     {
-        private int _printCounter = 0;
         private int _scanCounter = 0;
         private int _counter = 0;
-        public int PrintCounter { get => _printCounter; }
+
         public int ScanCounter { get => _scanCounter; }
-        public int Counter {  get => _counter; }
+        public int Counter { get => _counter; }
 
         public void PowerOff()
         {
-            if(state == IDevice.State.on) 
+            if (state == IDevice.State.on)
             {
                 state = IDevice.State.off;
                 Console.WriteLine("... Device is off !");
@@ -31,15 +30,6 @@ namespace Zadanie2
                 state = IDevice.State.on;
                 Console.WriteLine("Device is on ...");
                 _counter++;
-            }
-        }
-
-        public void Print(in IDocument document)
-        {
-            if (state == IDevice.State.on)
-            {
-                Console.WriteLine($"{DateTime.UtcNow} Print: {document.GetFileName()}");
-                _printCounter++;
             }
         }
 
@@ -73,13 +63,6 @@ namespace Zadanie2
 
                 _scanCounter++;
             }
-        }
-   
-        public void ScanAndPrint()
-        {
-            IDocument document;
-            Scan(out document, IDocument.FormatType.JPG);
-            Print(document);
         }
     }
 }
