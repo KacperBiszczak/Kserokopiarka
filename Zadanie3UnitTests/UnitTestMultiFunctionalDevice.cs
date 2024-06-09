@@ -26,9 +26,6 @@ namespace Zadanie3
             Assert.AreEqual(IDevice.State.on, multiFunctionalDevice.GetState());
         }
 
-
-        // weryfikacja, czy po wywo³aniu metody `Print` i w³¹czonej kopiarce w napisie pojawia siê s³owo `Print`
-        // wymagane przekierowanie konsoli do strumienia StringWriter
         [TestMethod]
         public void MultiFunctionalDevice_Print_DeviceOn()
         {
@@ -46,8 +43,6 @@ namespace Zadanie3
             Assert.AreEqual(currentConsoleOut, Console.Out);
         }
 
-        // weryfikacja, czy po wywo³aniu metody `Print` i wy³¹czonej kopiarce w napisie NIE pojawia siê s³owo `Print`
-        // wymagane przekierowanie konsoli do strumienia StringWriter
         [TestMethod]
         public void MultiFunctionalDevice_Print_DeviceOff()
         {
@@ -65,8 +60,6 @@ namespace Zadanie3
             Assert.AreEqual(currentConsoleOut, Console.Out);
         }
 
-        // weryfikacja, czy po wywo³aniu metody `Scan` i wy³¹czonej kopiarce w napisie NIE pojawia siê s³owo `Scan`
-        // wymagane przekierowanie konsoli do strumienia StringWriter
         [TestMethod]
         public void MultiFunctionalDevice_Scan_DeviceOff()
         {
@@ -84,8 +77,6 @@ namespace Zadanie3
             Assert.AreEqual(currentConsoleOut, Console.Out);
         }
 
-        // weryfikacja, czy po wywo³aniu metody `Scan` i wy³¹czonej kopiarce w napisie pojawia siê s³owo `Scan`
-        // wymagane przekierowanie konsoli do strumienia StringWriter
         [TestMethod]
         public void MultiFunctionalDevice_Scan_DeviceOn()
         {
@@ -103,8 +94,6 @@ namespace Zadanie3
             Assert.AreEqual(currentConsoleOut, Console.Out);
         }
 
-        // weryfikacja, czy wywo³anie metody `Scan` z parametrem okreœlaj¹cym format dokumentu
-        // zawiera odpowiednie rozszerzenie (`.jpg`, `.txt`, `.pdf`)
         [TestMethod]
         public void MultiFunctionalDevice_Scan_FormatTypeDocument()
         {
@@ -131,10 +120,6 @@ namespace Zadanie3
             Assert.AreEqual(currentConsoleOut, Console.Out);
         }
 
-
-        // weryfikacja, czy po wywo³aniu metody `ScanAndPrint` i wy³¹czonej kopiarce w napisie pojawiaj¹ siê s³owa `Print`
-        // oraz `Scan`
-        // wymagane przekierowanie konsoli do strumienia StringWriter
         [TestMethod]
         public void MultiFunctionalDevice_ScanAndPrint_DeviceOn()
         {
@@ -152,9 +137,6 @@ namespace Zadanie3
             Assert.AreEqual(currentConsoleOut, Console.Out);
         }
 
-        // weryfikacja, czy po wywo³aniu metody `ScanAndPrint` i wy³¹czonej kopiarce w napisie NIE pojawia siê s³owo `Print`
-        // ani s³owo `Scan`
-        // wymagane przekierowanie konsoli do strumienia StringWriter
         [TestMethod]
         public void MultiFunctionalDevice_ScanAndPrint_DeviceOff()
         {
@@ -193,7 +175,6 @@ namespace Zadanie3
             multiFunctionalDevice.ScanAndPrint();
             multiFunctionalDevice.ScanAndPrint();
 
-            // 5 wydruków, gdy urz¹dzenie w³¹czone
             Assert.AreEqual(5, multiFunctionalDevice.PrintCounter);
         }
 
@@ -219,7 +200,6 @@ namespace Zadanie3
             multiFunctionalDevice.ScanAndPrint();
             multiFunctionalDevice.ScanAndPrint();
 
-            // 4 skany, gdy urz¹dzenie w³¹czone
             Assert.AreEqual(4, multiFunctionalDevice.ScanCounter);
         }
 
@@ -252,7 +232,6 @@ namespace Zadanie3
             multiFunctionalDevice.ScanAndPrint();
             multiFunctionalDevice.ScanAndPrint();
 
-            // 3 w³¹czenia
             Assert.AreEqual(3, multiFunctionalDevice.Counter);
         }
 
